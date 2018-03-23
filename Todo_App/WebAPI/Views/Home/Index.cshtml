@@ -1,0 +1,13 @@
+
+<div id="app"></div>
+
+@section scripts {
+    <script type="text/javascript" src="~/dist/build.js" asp-append-version="true"></script>
+    <script>
+        viewData = {};
+        viewData.userId = '@ViewData["UserId"]';
+        viewData.userName = '@ViewData["UserName"]';
+        viewData.user = '@ViewData["user"]';
+        viewData.role = '@ViewData["role"]';
+    </script>
+}

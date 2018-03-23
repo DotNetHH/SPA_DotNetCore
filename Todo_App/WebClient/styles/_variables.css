@@ -1,0 +1,15 @@
+:global {
+  --c-light: #fff;
+  --c-dark: #454d52;
+  --c-gray: #a2a6a8;
+
+  --c-accent: #d71635;
+
+  /* Todos */
+  --c-bg-color: #324a5e;
+  --c-primary: #1CA099;
+  --c-bright: #eaeaea;
+  --c-f-accent1: #FF6663;
+  --c-f-accent2: #893168;
+  --c-f-accent3: #984447;
+}

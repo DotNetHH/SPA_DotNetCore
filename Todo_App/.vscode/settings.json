@@ -1,0 +1,34 @@
+{
+    "eslint.enable": false,
+    "tslint.typeCheck": true,
+    // "tslint.trace.server": "verbose",
+
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.format.styleInitialIndent": true,
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.ts": "vscode-typescript",
+
+    "prettier.tabWidth": 4,
+    // "html.format.wrapAttributes": "force-aligned",
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#1CA099"
+    },
+    "files.exclude": {
+        "**/.git": false,
+        "**/bin": false,
+        "**/obj": false,
+        "**/node_modules": false,
+        "**/dist": false,
+        "**/yarn.lock": false,
+        "**/tsconfig.json": false,
+        "**/tslint.json": false,
+        "**/.editorconfig": false,
+        "**/postcss-sorting.json": false,
+        "**/postcss-config.js": false,
+        "**/.gitignore": false,
+        "**/wallaby.config.js": false,
+        "**/webpack.*": false,
+        "**/package-lock.json": false,
+        "**/vue-module.d.ts": false
+    }
+}

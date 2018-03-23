@@ -1,0 +1,35 @@
+@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<section>
+    <h4>Login mit</h4>
+    <hr />
+    @{
+        var loginProviders = (await SignInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+        <form asp-action="ExternalLogin"
+              asp-route-returnurl="@ViewData["ReturnUrl"]"
+              method="post">
+            <div>
+                <p>
+                    @foreach (var provider in loginProviders)
+                    {
+                        <button type="submit"
+                                name="provider"
+                                value="@provider.Name"
+                                title="Log in using your @provider.DisplayName account">
+                            @provider.Name
+                        </button>
+                    }
+                </p>
+            </div>
+        </form>
+    }
+</section>

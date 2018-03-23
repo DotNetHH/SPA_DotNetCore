@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Access denied";
+}
+
+@if (ViewData["UserIsActivated"] == "True")
+{
+    <h2>Unbekannter Fehler</h2>
+}
+else
+{
+    <h2>Nutzer @ViewData["UserName"] ist nocht nicht aktiviert.</h2>
+
+    <p>Nach der Aktivierung m&uuml;ssen Sie sich neu anmelden.</p>
+
+    <form asp-area=""
+          asp-controller="Account"
+          asp-action="Logout"
+          method="post"
+          id="logoutForm">
+
+        <button type="submit">Log out</button>
+
+    </form>
+}
